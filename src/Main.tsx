@@ -1,4 +1,4 @@
-import { useRoutes, Routes, Route, Navigate, Link } from 'react-router-dom';
+import { useRoutes, Routes, Route, Navigate, Link    } from 'react-router-dom';
 import { useContext } from 'react';
 import router from 'src/router';
 
@@ -20,8 +20,9 @@ import UserManagement from './content/applications/Transactions';
 function Main(props:{type:string}) {
   const content = useRoutes(router);
   const {userPriority} = useContext(UserPriorityContext);
-
   return (
+    sessionStorage.getItem('token') ? 
+    
     <>
     {props.type=="admin"?(
         <SidebarLayout type="admin">
@@ -41,6 +42,7 @@ function Main(props:{type:string}) {
         </SidebarLayout>
     )}
     </>
+    :  props.type=="admin"?<Navigate to="/admin" />:<Navigate to="/agent" />
   );
 }
 export default Main;
