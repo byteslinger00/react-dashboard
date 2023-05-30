@@ -35,7 +35,6 @@ function Main(props:{type:string}) {
     ):(
         <SidebarLayout type="agent">
           <Routes>
-            <Route path='/management/users' element={<UserManagement/>}/>
             <Route path='*' element={<Navigate to={'/agent/app/management/users'} />} />
           </Routes>        
         </SidebarLayout>
