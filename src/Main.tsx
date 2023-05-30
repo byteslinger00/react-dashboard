@@ -28,7 +28,6 @@ function Main(props:{type:string}) {
         <Routes>
             <Route path='/dashboard' element={<AdminDashboard/>}/>
             <Route path='/management/agents' element={<AgentManagement/>}/>
-            <Route path='/management/users' element={<UserManagement/>}/>
             <Route path='*' element={<Navigate to={'/admin/app/dashboard'} />} />
         </Routes>
         </SidebarLayout>
