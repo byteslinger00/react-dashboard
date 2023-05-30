@@ -71,7 +71,7 @@ function GeneralStatistic() {
               alignItems="center"
               justifyContent="space-between"
             >
-              <Typography sx={{ fontSize: "24px" }}>User Statistic</Typography>
+              <Typography sx={{ fontSize: "24px" }}>Users</Typography>
             </Box>
             <Grid container spacing={4}>
               <Grid item xs={12} sm={8} md={8}>
